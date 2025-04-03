@@ -48,6 +48,18 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    middlewareMode: false,
+    transformIndexHtml: (html) => {
+      // 注入消除滚动条的 CSS 样式
+      return html.replace(
+        "</head>",
+        `<style>
+          body { margin: 0; overflow: hidden; }
+          canvas { display: block; }
+        </style>
+        </head>`
+      );
+    },
   },
 
   // 移除 Monaco Editor 工作器配置，简化处理
