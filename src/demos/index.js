@@ -1,36 +1,31 @@
-/**
- * 案例数据索引
- *
- * 每个案例需要包含以下信息：
- * - id: 案例目录名称
- * - title: 案例标题
- * - description: 案例描述
- * - thumbnail: 缩略图路径
- * - tags: 标签数组
- */
+import demoConfig from "./config.js";
 
-export const examples = [
-  {
-    id: "rotating-cube",
-    title: "旋转立方体",
-    description: "一个基础的 Three.js 示例，展示一个在场景中旋转的彩色立方体。",
-    thumbnail: "/src/demos/rotating-cube/thumbnail.jpg",
-    tags: ["basic", "animation"],
-  },
-  {
-    id: "animated-line",
-    title: "动画线条",
-    description: "一个使用Three.js创建的动画线条效果",
-    thumbnail: "/src/demos/animated-line/thumbnail.jpg",
-    tags: ["animation", "line"],
-  },
-];
+// 处理路径，移除多余的src目录
+const processPath = (demo) => {
+  if (demo.entry && demo.entry.includes("/src/")) {
+    demo.entry = demo.entry.replace("/src/", "/");
+  }
+  return demo;
+};
 
-/**
- * 获取案例详细信息
- * @param {string} id - 案例ID
- * @returns {Object|null} - 案例信息或null
- */
-export function getExampleById(id) {
-  return examples.find((example) => example.id === id) || null;
-}
+// 导出所有demos的配置
+export const demos = Array.isArray(demoConfig) ? demoConfig.map(processPath) : [];
+// 为了兼容性，将demos作为examples导出
+export const examples = demos;
+
+// 导出获取demo配置的方法
+export const getDemoById = (id) => {
+  return demos.find((demo) => demo.id === id) || null;
+};
+
+// 导出获取所有demos的方法
+export const getAllDemos = () => {
+  return [...demos].sort((a, b) => a.title.localeCompare(b.title));
+};
+
+export default {
+  demos,
+  examples,
+  getDemoById,
+  getAllDemos,
+};
