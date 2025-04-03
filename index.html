@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js 案例集合</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Three.js 案例集合</h1>
+    <p>探索 Three.js 的各种精彩案例</p>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索案例...">
+      </div>
+      
+      <div class="filter-tags">
+        <button class="tag active" data-tag="all">全部</button>
+        <button class="tag" data-tag="basic">基础</button>
+        <button class="tag" data-tag="advanced">进阶</button>
+        <button class="tag" data-tag="animation">动画</button>
+        <button class="tag" data-tag="physics">物理</button>
+        <button class="tag" data-tag="shader">着色器</button>
+      </div>
+      
+      <div class="examples-grid" id="examples-grid">
+        <!-- 案例卡片将通过 JavaScript 动态生成 -->
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>Three.js 案例集合 &copy; 2025</p>
+  </footer>
+  
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

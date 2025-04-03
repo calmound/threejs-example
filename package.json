@@ -1,0 +1,26 @@
+{
+  "name": "threejs-example",
+  "version": "1.0.0",
+  "description": "Three.js 案例集合",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "three.js",
+    "webgl",
+    "3d",
+    "examples"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "monaco-editor": "^0.52.2",
+    "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
