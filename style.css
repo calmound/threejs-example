@@ -88,19 +88,20 @@ header p {
 /* 案例网格 */
 .examples-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 适应新的卡片宽度 */
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 10px;
 }
 
 .example-card {
-  width: 240px; /* 减小卡片宽度 */
-  margin: 10px; /* 减小外边距 */
+  width: 100%;
+  margin: 0;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: block;
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0.8rem;
 }
 
 .example-card:hover {
@@ -172,6 +173,18 @@ footer {
 }
 
 /* 响应式调整 */
+@media (max-width: 1200px) {
+  .examples-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .examples-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   header {
     padding: 2rem 1rem;
@@ -179,10 +192,6 @@ footer {
   
   header h1 {
     font-size: 2rem;
-  }
-  
-  .examples-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
