@@ -28,6 +28,20 @@ const demoConfig = [
     thumbnail: "/src/demos/animated-line/thumbnail.jpg",
     tags: ["demo"],
   },
+  {
+    id: "reel3d",
+    title: "3D Reel",
+    description: "Three.js reel3d demo",
+    thumbnail: "/src/demos/reel3d/thumbnail.jpg",
+    tags: ["demo"],
+  },
+  {
+    id: "dissolve",
+    title: "溶解效果",
+    description: "Three.js dissolve demo",
+    thumbnail: "/src/demos/dissolve/thumbnail.jpg",
+    tags: ["demo"],
+  },
   //   {
   //     id: "ballnoise",
   //     title: "Ballnoise",

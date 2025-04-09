@@ -18,7 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "monaco-editor": "^0.52.2",
-    "three": "^0.175.0"
+    "three": "^0.175.0",
+    "tweakpane": "^4.0.5"
   },
   "devDependencies": {
     "vite": "^5.0.0"
