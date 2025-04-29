@@ -37,8 +37,15 @@ const demoConfig = [
   },
   {
     id: "dissolve",
-    title: "溶解效果",
+    title: "溶解效果11",
     description: "Three.js dissolve demo",
+    thumbnail: "/src/demos/dissolve/thumbnail.jpg",
+    tags: ["demo"],
+  },
+  {
+    id: "rotation",
+    title: "旋风旋转",
+    description: "",
     thumbnail: "/src/demos/dissolve/thumbnail.jpg",
     tags: ["demo"],
   },

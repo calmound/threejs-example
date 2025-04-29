@@ -17,6 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "gsap": "^3.12.7",
+    "lil-gui": "^0.20.0",
     "monaco-editor": "^0.52.2",
     "three": "^0.175.0",
     "tweakpane": "^4.0.5"
